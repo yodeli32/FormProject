@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">formPage1</string>
+    <string name="feedbacktitle">General Information: We would love to get some information from you.</string>
+    <string name="feedbackname">Full Name</string>
+    <string name="feedbackemail">Email Address</string>
+    <string name="feedbacktype">type</string>
+    <string name="feedbackbody">Any additional comments...</string>
+    <string name="feedbackresponse">Would you like an email response?</string>
+    <string name="feedbackbutton">Send Feedback</string>
+
+    <string name="feedbacktype1">Praise</string>
+    <string name="feedbacktype2">Gripe</string>
+    <string name="feedbacktype3">Suggestion</string>
+    <string name="feedbacktype4">Bug</string>
+
+</resources>
