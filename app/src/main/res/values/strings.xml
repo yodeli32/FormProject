@@ -26,5 +26,11 @@
     <string name="feedbacktype2">Gripe</string>
     <string name="feedbacktype3">Suggestion</string>
     <string name="feedbacktype4">Bug</string>
+    <string name="welcome">Welcome!</string>
+    <string name="choose_a_form">Choose a Form:</string>
+    <string name="customer_satisfaction_survey">Customer Satisfaction Survey</string>
+    <string name="contact_us_form">Contact Us Form</string>
+    <string name="event_registration_form">Event Registration Form</string>
+    <string name="share">Share</string>
 
 </resources>

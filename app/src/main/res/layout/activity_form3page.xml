@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -102,14 +106,15 @@
         app:layout_constraintTop_toBottomOf="@+id/EditTextEmail" />
 
     <Button
-        android:id="@+id/ButtonSendFeedback"
+        android:id="@+id/shareButton"
         android:layout_width="86dp"
         android:layout_height="41dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:background="@color/sendButton"
         android:onClick="sendFeedback"
-        android:text="@string/feedbackbutton"
+        android:text="@string/share"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EditTextFeedbackBody" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

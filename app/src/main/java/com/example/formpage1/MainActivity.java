@@ -14,10 +14,40 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button shareButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final EditText firstNameField = (EditText)findViewById(R.id.EditTextFirstName);
+        final EditText lastNameField = (EditText)findViewById(R.id.EditTextLastName);
+        final EditText emailField = (EditText)findViewById(R.id.EditTextEmail);
+        final EditText feedbackField = (EditText)findViewById(R.id.EditTextFeedbackBody);
+        final RatingBar ratingBar = (RatingBar)findViewById(R.id.ratingBar);
+        final CheckBox responseCheckbox = (CheckBox)findViewById(R.id.CheckBoxResponse);
+
+        shareButton= (Button)findViewById(R.id.buttonSendFeedback);
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                String firstName = firstNameField.getText().toString();
+                String lastName = lastNameField.getText().toString();
+                String email = emailField.getText().toString();
+                String feedback = feedbackField.getText().toString();
+                Float stars = ratingBar.getRating();
+                boolean bRequiresResponse = responseCheckbox.isChecked();
+                String shareBody = firstName + "\n" + lastName + "\n" + email  + "\n" + stars + " stars" +
+                        "\n" + bRequiresResponse + " for an Email Response" + "\n" + feedback;
+
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Customer Satisfaction Survey:");
+                intent.putExtra(Intent.EXTRA_TEXT, shareBody);
+
+                startActivity(Intent.createChooser(intent, "Share Customer Satisfaction"));
+            }
+        });
     }
 
     public void sendFeedback(View button) {
@@ -42,4 +72,6 @@ public class MainActivity extends AppCompatActivity {
         final CheckBox responseCheckbox = (CheckBox)findViewById(R.id.CheckBoxResponse);
         boolean bRequiresResponse = responseCheckbox.isChecked();
     }
+
+
 }
