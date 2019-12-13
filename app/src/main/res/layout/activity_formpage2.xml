@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundForms">
-
+    android:background="@color/backgroundForms"
+    tools:context=".formpage2">
 
     <TextView
-        android:id="@+id/TextViewTitle"
+        android:id="@+id/form2title"
         android:layout_width="0dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="serif"
         android:paddingLeft="12dp"
         android:paddingTop="25dp"
         android:paddingRight="12dp"
-        android:text="@string/feedbacktitle"
+        android:text="@string/form2_title"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
@@ -36,9 +36,9 @@
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextViewTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/form2title" />
 
     <EditText
         android:id="@+id/EditTextLastName"
@@ -55,10 +55,26 @@
         app:layout_constraintTop_toBottomOf="@+id/EditTextFirstName" />
 
     <EditText
+        android:id="@+id/EditTextPhone"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/phoneNumber"
+        android:inputType="textPhonetic"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextLastName" />
+
+    <EditText
         android:id="@+id/EditTextEmail"
         android:layout_width="fill_parent"
         android:layout_height="60dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="8dp"
         android:hint="@string/feedbackemail"
         android:inputType="textEmailAddress"
@@ -67,87 +83,84 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditTextLastName" />
+        app:layout_constraintTop_toBottomOf="@+id/EditTextPhone" />
 
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="242dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="9dp"
-        android:numStars="5"
-        android:rating="2.0"
-        android:stepSize="1.0"
-        app:layout_constraintStart_toEndOf="@+id/rateUs"
-        app:layout_constraintTop_toBottomOf="@+id/SpinnerFeedbackType" />
-
-    <Spinner
-        android:id="@+id/SpinnerFeedbackType"
-        android:layout_width="fill_parent"
-        android:layout_height="58dp"
-        android:layout_marginTop="14dp"
-        android:entries="@array/feedbacktypelist"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
-        android:prompt="@string/feedbacktype"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="311dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="serif"
+        android:text="@string/tickets"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EditTextEmail" />
 
     <EditText
-        android:id="@+id/EditTextFeedbackBody"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:id="@+id/amountOfTickets"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextEmail" />
+
+    <CheckBox
+        android:id="@+id/checkDietaryRestrictions"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:paddingLeft="6dp"
+        android:text="@string/Restrictions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/DietaryRestrictionsComments"
+        android:layout_width="386dp"
+        android:layout_height="84dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:hint="@string/feedbackbody"
+        android:hint="@string/ifYes1"
         android:lines="5"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CheckBoxResponse" />
+        app:layout_constraintTop_toBottomOf="@+id/checkDietaryRestrictions" />
 
     <CheckBox
-        android:id="@+id/CheckBoxResponse"
+        android:id="@+id/CheckTransportation"
         android:layout_width="fill_parent"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:paddingLeft="6dp"
-        android:text="@string/feedbackresponse"
+        android:text="@string/Accommodations"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+        app:layout_constraintTop_toBottomOf="@+id/DietaryRestrictionsComments" />
 
     <Button
         android:id="@+id/ButtonSendFeedback"
         android:layout_width="86dp"
         android:layout_height="41dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         android:background="@color/sendButton"
         android:onClick="sendFeedback"
         android:text="@string/feedbackbutton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditTextFeedbackBody" />
-
-    <TextView
-        android:id="@+id/rateUs"
-        android:layout_width="80dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="sans-serif"
-        android:text="Rating"
-        android:textAlignment="textStart"
-        android:textColor="@android:color/background_dark"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SpinnerFeedbackType" />
-
+        app:layout_constraintTop_toBottomOf="@+id/CheckTransportation" />
 </androidx.constraintlayout.widget.ConstraintLayout>

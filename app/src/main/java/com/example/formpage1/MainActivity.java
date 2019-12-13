@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RatingBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,8 +21,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendFeedback(View button) {
-        final EditText nameField = (EditText)findViewById(R.id.EditTextName);
-        String name = nameField.getText().toString();
+        final EditText firstNameField = (EditText)findViewById(R.id.EditTextFirstName);
+        String firstName = firstNameField.getText().toString();
+
+        final EditText lastNameField = (EditText)findViewById(R.id.EditTextLastName);
+        String lastName = lastNameField.getText().toString();
 
         final EditText emailField = (EditText)findViewById(R.id.EditTextEmail);
         String email = emailField.getText().toString();
@@ -30,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
         final Spinner feedbackSpinner = (Spinner)findViewById(R.id.SpinnerFeedbackType);
         String feedbackType = feedbackSpinner.getSelectedItem().toString();
+
+        final RatingBar ratingBar = (RatingBar)findViewById(R.id.ratingBar);
+        ratingBar.getRating();
 
         final CheckBox responseCheckbox = (CheckBox)findViewById(R.id.CheckBoxResponse);
         boolean bRequiresResponse = responseCheckbox.isChecked();

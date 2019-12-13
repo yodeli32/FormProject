@@ -1,12 +1,26 @@
 <resources>
-    <string name="app_name">formPage1</string>
-    <string name="feedbacktitle">General Information: We would love to get some information from you.</string>
-    <string name="feedbackname">Full Name</string>
+    <string name="app_name">Form App</string>
+    <string name="form1_name">Customer Satisfaction Survey</string>
+    <string name="feedbacktitle">Customer Satisfaction Survey</string>
+    <string name="feedbackfirstname">First Name</string>
+    <string name="feedbacklastname">Last Name</string>
     <string name="feedbackemail">Email Address</string>
     <string name="feedbacktype">type</string>
-    <string name="feedbackbody">Any additional comments...</string>
+    <string name="feedbackbody">Feedback message.</string>
     <string name="feedbackresponse">Would you like an email response?</string>
-    <string name="feedbackbutton">Send Feedback</string>
+    <string name="feedbackbutton">Submit!</string>
+
+    <string name="form2_name">Event Registration Form</string>
+    <string name="form2_title">Event Registration Form</string>
+    <string name="form2_ticketNumber">type</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="tickets">How many tickets will you be needing? </string>
+    <string name="amount">#</string>
+    <string name="Restrictions">Do you have any dietary restrictions?</string>
+    <string name="Accommodations">Do you require any transportation accommodations?</string>
+    <string name="ifYes1">Dietary Restrictions</string>
+
+    <string name="form3title">Contact Us Form</string>
 
     <string name="feedbacktype1">Praise</string>
     <string name="feedbacktype2">Gripe</string>
