@@ -16,9 +16,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".form3page" />
-        <activity android:name=".formpage2" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".form3page" android:parentActivityName=".WelcomeActivity">
+            <meta-data
+                android:name="android.intent.support.PARENT_ACTIVITY"
+                android:value=".WelcomeActivity" />
+        </activity>
+
+        <activity android:name=".formpage2" android:parentActivityName=".WelcomeActivity">
+            <meta-data
+                android:name="android.intent.support.PARENT_ACTIVITY"
+                android:value=".WelcomeActivity" />
+        </activity>
+
+        <activity android:name=".MainActivity" android:parentActivityName=".WelcomeActivity">
+        <meta-data
+            android:name="android.intent.support.PARENT_ACTIVITY"
+            android:value=".WelcomeActivity" />
+        </activity>
+        
     </application>
 
 </manifest>
